@@ -6,11 +6,8 @@ An interactive spellchecker plugin for [Blightmud].
 
 ## Status
 
-Presently this plugin requires unreleased Blightmud features. See [this tracking
-issue][Blightmud-spellcheck]. It will not function with "vanilla" Blightmud
-until the required features are upstreamed.
-
-[Blightmud-spellcheck]: https://github.com/Blightmud/Blightmud/issues/725
+Presently this plugin requires unreleased Blightmud features. You must build
+Blightmud from source in order to use this plugin.
 
 ## Features
 
