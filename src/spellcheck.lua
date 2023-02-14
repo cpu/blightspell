@@ -4,6 +4,7 @@ local ignore_words = {
   ["blightmud"]=true,
   ["Blightmud"]=true,
   ["blightspell"]=true,
+  ["Blightspell"]=true,
 }
 
 -- convert buf to a table of words, indexed by their start location in buf.
