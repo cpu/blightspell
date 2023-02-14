@@ -21,7 +21,7 @@ Blightmud from source in order to use this plugin.
 
 ## Demo
 
-[![asciicast](https://asciinema.org/a/ZvMTNWBIOk1ib84isRUxrUHBu.svg)](https://asciinema.org/a/ZvMTNWBIOk1ib84isRUxrUHBu)
+[![asciicast](https://asciinema.org/a/uHAMcFnDaLxHbzqGxtJrwNCx0.svg)](https://asciinema.org/a/uHAMcFnDaLxHbzqGxtJrwNCx0)
 
 ## Installation
 
