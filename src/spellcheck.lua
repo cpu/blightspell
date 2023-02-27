@@ -15,21 +15,21 @@ function blightspell_word_table(buf)
     local c = buf:sub(i, i)
     local stop = c:find("[%s]")
 
-    function strip_outer_punctuation(word)
-      return string.gsub(string.gsub(word, '[%p]+$', ''), '^[%p]+', '')
-    end
-
     if stop ~= nil then
       local word = buf:sub(word_start, i - 1)
-      words[word_start] = strip_outer_punctuation(word)
+      words[word_start] = word
       word_start = i + 1
     elseif i == #buf then
       local word = buf:sub(word_start, i)
-      words[word_start] = strip_outer_punctuation(word)
+      words[word_start] = word
     end
   end
 
   return words
+end
+
+local function strip_outer_punctuation(word)
+  return string.gsub(string.gsub(word, '[%p]+$', ''), '^[%p]+', '')
 end
 
 -- return a table of misspelled words found in blightspell_word_table keyed by
@@ -37,7 +37,8 @@ end
 function blightspell_misspelled()
   local result = {}
   for idx, word in pairs(blightspell_words) do
-    if ignore_words[word] == nil and spellcheck.check(word) == false then
+    local clean_word = strip_outer_punctuation(word)
+    if ignore_words[clean_word] == nil and spellcheck.check(clean_word) == false then
       result[idx] = word
     end
   end
@@ -49,7 +50,7 @@ end
 function blightspell_suggestions(word)
   local max_suggest = blightspell_settings.max_suggest
 
-  local suggestions = spellcheck.suggest(word)
+  local suggestions = spellcheck.suggest(strip_outer_punctuation(word))
   if #suggestions >= max_suggest then
     suggestions = {table.unpack(suggestions, 1, max_suggest)}
   end
