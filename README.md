@@ -6,8 +6,7 @@ An interactive spellchecker plugin for [Blightmud].
 
 ## Status
 
-Presently this plugin requires unreleased Blightmud features. You must build
-Blightmud from source in order to use this plugin.
+Blightspell is **beta** quality. It requires Blightmud v5.1.0 or newer.
 
 ## Features
 
