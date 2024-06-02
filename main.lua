@@ -14,9 +14,9 @@ if _G["spellcheck"] == nil then
     "spellcheck API.\nThis plugin can not function without this "..
     "API.\nPlease update your Blightmud installation and try again.<reset>"))
 else
-  require("src/settings")
-  require("src/spellcheck")
-  require("src/listeners")
-  require("src/bindings")
-  require("src/init")
+  require("src/blightspell_settings")
+  require("src/blightspell_spellcheck")
+  require("src/blightspell_listeners")
+  require("src/blightspell_bindings")
+  require("src/blightspell_init")
 end
